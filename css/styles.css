@@ -1,0 +1,804 @@
+/* styles.css */
+
+/* Root Variables */
+:root {
+    --primary-color: #2D3142;
+    --secondary-color: #4F5D75;
+    --accent-color: #EF8354;
+    --background-color: #F5F5F5;
+    --text-color: #2D3142;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Section Styles */
+section {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+}
+
+h4 {
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+p,
+li {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+/* Publications Styles */
+.publication {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pub-type {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.pub-type.conference {
+    background: var(--accent-color);
+}
+
+.pub-type.under-review {
+    background: var(--secondary-color);
+}
+
+/* Skills Styles */
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Research Section Styles */
+.research-item {
+    margin-bottom: 3rem;
+}
+
+.thesis-highlights ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thesis-highlights li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.thesis-highlights li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.research-interests .interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    background: url('https://source.unsplash.com/1600x900/?code') no-repeat center center/cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+/* Contact Form Styles */
+.contact-form {
+    margin-top: 2rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(239, 131, 84, 0.5);
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+/* Experience Item Styles */
+.experience-item {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.experience-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item p {
+    margin-bottom: 0.5rem;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5rem;
+}
+/* Education Item Styles */
+.education-item {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.education-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.education-item p {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Research Item Styles */
+.research-item {
+    margin-bottom: 3rem;
+}
+
+.research-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.research-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Thesis Highlights */
+.thesis-highlights ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thesis-highlights li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.thesis-highlights li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Publications */
+.publication {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pub-type {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.pub-type.conference {
+    background: var(--accent-color);
+}
+
+.pub-type.under-review {
+    background: var(--secondary-color);
+}
+
+/* Research Interests */
+.research-interests .interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Skill Category Styles */
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--secondary-color);
+}
+/* Coursework List Styles */
+.coursework-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.coursework-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Two-column layout for coursework list */
+@media (min-width: 600px) {
+    .coursework-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .coursework-list li {
+        margin-bottom: 0.8rem;
+    }
+}
+/* Coursework List Styles */
+.coursework-section {
+    margin-top: 1.5rem;
+}
+
+.coursework-section h5 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.coursework-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.coursework-lists-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.coursework-section {
+    flex: 1 1 45%;
+}
+
+/* Ensure lists stack on smaller screens */
+@media (max-width: 768px) {
+    .coursework-lists-container {
+        flex-direction: column;
+    }
+}
+/* Programming Platforms Styles */
+.programming-platforms {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.programming-platforms li {
+    margin-bottom: 0.5rem;
+}
+
+.programming-platforms li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.programming-platforms li a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Skill Category Styles */
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-category p {
+    margin-bottom: 0.5rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Social Media Links */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media a {
+    color: white;
+    background-color: var(--accent-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: var(--secondary-color);
+}
+/* Variables */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #333333;
+    --accent-color: #ef8354;
+    --text-color: #555555;
+    --background-color: #f9f9f9;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 4rem 1rem 2rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    color: #ffffff;
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-color);
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Research Interests */
+#interests h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.interest-tag {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.interest-tag:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* Call to Action */
+#cta {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-radius: 12px;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+#cta .btn {
+    background-color: #ffffff;
+    color: var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#cta .btn:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #interests h2 {
+        font-size: 1.5rem;
+    }
+
+    #cta p {
+        font-size: 1.1rem;
+    }
+}
