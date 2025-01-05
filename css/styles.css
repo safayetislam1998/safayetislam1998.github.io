@@ -873,3 +873,19 @@ footer {
         gap: 0.5rem;
     }
 }
+
+.skill-tag {
+    background-color: #FF6B6B;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.project-tech {
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
