@@ -889,3 +889,27 @@ footer {
     margin-bottom: 16px;
     margin-top: 8px;
 }
+
+.contact-info i {
+    color: var(--accent-color);
+}
+
+/* Visitor Count Styles */
+.visitor-count {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.visitor-count span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+.visitor-count img {
+    height: 20px;
+}
